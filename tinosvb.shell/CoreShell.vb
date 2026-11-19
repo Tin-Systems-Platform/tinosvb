@@ -1,4 +1,5 @@
 ﻿Imports Cosmos.Kernel.System
+Imports tinosvb.shell.Commands
 
 Public Class CoreShell
     Public Sub New()
@@ -11,10 +12,8 @@ Public Class CoreShell
 
         Select Case input.ToLower()
             Case "help"
-                Console.WriteLine("Available commands:")
-                Console.WriteLine("  help     - Show this help message")
-                Console.WriteLine("  clear    - Clear the screen")
-                Console.WriteLine("  halt     - Halt the system")
+                Dim help As New Help()
+                help.HelpCmd()
 
             Case "clear"
                 Console.Clear()
@@ -24,6 +23,12 @@ Public Class CoreShell
                 While True
                     Power.Halt()
                 End While
+            Case "ver"
+                Dim about As New About()
+                about.VerCmd()
+            Case "credit"
+                Dim about As New About()
+                about.CreditCmd()
             Case Else
                 Console.WriteLine($"""{input}"" is not a command")
         End Select

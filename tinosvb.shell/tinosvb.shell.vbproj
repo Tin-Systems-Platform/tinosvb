@@ -3,6 +3,7 @@
   <PropertyGroup>
     <RootNamespace>tinosvb.shell</RootNamespace>
     <TargetFramework>net10.0</TargetFramework>
+	  <RootNamespace>tinosvb.shell</RootNamespace>
   </PropertyGroup>
 
 	<ItemGroup>

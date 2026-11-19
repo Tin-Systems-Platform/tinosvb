@@ -8,8 +8,8 @@ Public Class Kernel
     Inherits Sys.Kernel
 
     Protected Overrides Sub BeforeRun()
-        Console.WriteLine("Cosmos booted successfully!")
-        Console.WriteLine("Type a command to get it executed.")
+        Console.WriteLine("Welcome to the TinosVB! The exciting journey begins with VB here.")
+        Console.WriteLine("Type 'help' for a list of available commands.")
     End Sub
 
     Protected Overrides Sub Run()
