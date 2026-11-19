@@ -1,4 +1,5 @@
 Imports Sys = Cosmos.Kernel.System
+Imports tinosvb.shell
 
 ''' <summary>
 ''' Main kernel class - inherits from Cosmos.Kernel.System.Kernel.
@@ -12,29 +13,6 @@ Public Class Kernel
     End Sub
 
     Protected Overrides Sub Run()
-        Console.Write("> ")
-        Dim input As String = Console.ReadLine()
-
-        If String.IsNullOrEmpty(input) Then
-            Return
-        End If
-
-        Select Case input.ToLower()
-            Case "help"
-                Console.WriteLine("Available commands:")
-                Console.WriteLine("  help     - Show this help message")
-                Console.WriteLine("  clear    - Clear the screen")
-                Console.WriteLine("  halt     - Halt the system")
-
-            Case "clear"
-                Console.Clear()
-
-            Case "halt"
-                Console.WriteLine("Halting system...")
-                Me.Stop()
-
-            Case Else
-                Console.WriteLine($"""{input}"" is not a command")
-        End Select
+        Dim shell As New CoreShell()
     End Sub
 End Class

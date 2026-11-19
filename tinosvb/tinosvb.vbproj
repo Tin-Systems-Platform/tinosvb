@@ -10,5 +10,8 @@
     <PackageReference Include="Cosmos.Kernel" Version="3.0.99" />
     <PackageReference Include="Cosmos.Kernel.System" Version="3.0.99" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tinosvb.shell\tinosvb.shell.vbproj" />
+  </ItemGroup>
 
 </Project>
